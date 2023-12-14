@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Switcher</title>
+  <style>
+    /* Add some basic styling for the images */
+    #imageContainer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+    img {
+      max-width: 10%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+    <h1>hello chuppai munyenyo</h1>
+
+<div id="imageContainer">
+  <img id="image1" src="anees.jpg" alt="Image 1">
+  <br>
+  <img id="image2" class="hidden" src="anees2.jpg" alt="Image 2">
+  <button onclick="switchImage()">Switch Image</button>
+</div>
+
+<script>
+  // JavaScript code to switch images
+  var currentImageIndex = 1; // Index of the currently displayed image
+
+  function switchImage() {
+    var image1 = document.getElementById('image1');
+    var image2 = document.getElementById('image2');
+
+    if (currentImageIndex === 1) {
+      image1.classList.add('hidden');
+      image2.classList.remove('hidden');
+      currentImageIndex = 2;
+    } else {
+      image1.classList.remove('hidden');
+      image2.classList.add('hidden');
+      currentImageIndex = 1;
+    }
+  }
+</script>
+
+</body>
+</html>
